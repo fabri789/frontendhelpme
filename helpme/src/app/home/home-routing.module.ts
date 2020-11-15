@@ -19,8 +19,11 @@ const routes: Routes = [
       {
         path: 'home',
         loadChildren: () => import('../paginas/lista-publicacion/lista-publicacion.module').then(m => m.ListaPublicacionPageModule)
+      },
+      {
+        path: 'login',
+        loadChildren: () => import('../paginas/login/login.module').then(m => m.LoginPageModule)
       }
-      
 
     ]
     
