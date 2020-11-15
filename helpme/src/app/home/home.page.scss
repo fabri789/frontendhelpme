@@ -25,3 +25,16 @@
 #container a {
   text-decoration: none;
 }
+
+ion-tab-bar{
+  --color-selected: #000 !important;
+  
+}
+ion-tab-button.tab-selected {
+  --background: #E3FFBD !important;
+
+}
+
+ion-content{
+  --ion-background-color:#C3EDCC;
+}
