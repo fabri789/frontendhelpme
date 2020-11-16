@@ -10,7 +10,7 @@ const routes: Routes = [
     [
       {
         path: 'sobre-nosotros',
-        loadChildren: () => import('../paginas/informacion/informacion.module').then(m => m.InformacionPageModule)
+        loadChildren: () => import('../paginas/sobre-nosotros/sobre-nosotros.module').then(m => m.SobreNosotrosPageModule)
       },
       {
         path: 'registro',
@@ -23,6 +23,10 @@ const routes: Routes = [
       {
         path: 'login',
         loadChildren: () => import('../paginas/login/login.module').then(m => m.LoginPageModule)
+      },
+      {
+        path: 'preguntas-respuestas',
+        loadChildren: () => import('../paginas/informacion/informacion.module').then(m => m.InformacionPageModule)
       }
 
     ]
