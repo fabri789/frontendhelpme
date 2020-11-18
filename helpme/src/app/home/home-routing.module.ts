@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomePage } from './home.page';
 
+
 const routes: Routes = [
   {
     path: '',
@@ -17,8 +18,18 @@ const routes: Routes = [
         loadChildren: () => import('../paginas/registro/registro.module').then(m => m.RegistroPageModule)
       },
       {
-        path: 'home',
-        loadChildren: () => import('../paginas/lista-publicacion/lista-publicacion.module').then(m => m.ListaPublicacionPageModule)
+        path: 'lista-publicacion',
+        children: 
+        [
+          {
+            path: '',
+            loadChildren: () => import('../paginas/lista-publicacion/lista-publicacion.module').then(m => m.ListaPublicacionPageModule),
+          },
+          {
+            path: 'publicacion/:id',
+            loadChildren: () => import('../paginas/publicacion/publicacion.module').then(m => m.PublicacionPageModule)
+          },
+        ]
       },
       {
         path: 'login',
@@ -27,7 +38,8 @@ const routes: Routes = [
       {
         path: 'preguntas-respuestas',
         loadChildren: () => import('../paginas/informacion/informacion.module').then(m => m.InformacionPageModule)
-      }
+      },
+     
 
     ]
     

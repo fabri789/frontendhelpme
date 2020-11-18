@@ -1,9 +1,18 @@
 .login {
     position:absolute;
-    left: 30%;
+    left: 25%;
     top: 10%;
-    max-width: 500px;
+    width: 100vh;
     max-height: 170px;
     border-style: ridge;
     border-color: #426d33;
+    
 }
+ion-content{
+    background-color: #E2EBD1!important;
+ }
+
+ ion-input{
+    background-color: #E2EBD1!important
+
+ }

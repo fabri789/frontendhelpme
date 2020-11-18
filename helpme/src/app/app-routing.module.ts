@@ -12,7 +12,7 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'informacion',
+    path: 'preguntas-respuestas',
     loadChildren: () => import('./paginas/informacion/informacion.module').then( m => m.InformacionPageModule)
   },
   {
@@ -24,7 +24,7 @@ const routes: Routes = [
     loadChildren: () => import('./paginas/registro/registro.module').then( m => m.RegistroPageModule)
   },
   {
-    path: 'publicacion',
+    path: 'publicacion/:id',
     loadChildren: () => import('./paginas/publicacion/publicacion.module').then( m => m.PublicacionPageModule)
   },
   {

@@ -6,12 +6,9 @@
       <img src="../assets/icon/corg.png" style="align-items: center"/>
       <ion-card-header translucent>
         <ion-card-title class = "titulo">{{publicaciones.titulo}}</ion-card-title>
-        <ion-card-subtitle>{{publicaciones.fecha_publicacion}}</ion-card-subtitle>
+        <ion-card-subtitle>Fecha de creacion : {{publicaciones.fecha_publicacion}}</ion-card-subtitle>
       </ion-card-header>
-      <ion-card-content fullscreen>
-        {{publicaciones.descripcion}}
-      </ion-card-content>
-      <ion-button>Donar</ion-button>
+      <ion-button [routerLink] = "['/publicacion',publicaciones.id_publicacion]" fill = "clear">Ver más...</ion-button>
     </ion-card>
   </ion-list>
 </div>

@@ -14,6 +14,7 @@ import { RegistroUsuarioPage } from 'src/app/modals/registro-usuario/registro-us
 
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClient, HttpHeaders, HttpHandler } from '@angular/common/http'
+import { HomePage } from './home/home.page';
 
 @NgModule({
   declarations: [AppComponent],

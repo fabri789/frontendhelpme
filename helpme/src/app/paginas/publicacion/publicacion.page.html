@@ -1,9 +1,32 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>publicacion</ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content>
-
+  <div *ngIf = "mipublicacion">
+    <ion-slides [options] ="slideOpts" >
+      <ion-slide>
+        <ion-card class = "cartafoto">
+          <img class = "foto" src="../assets/icon/corg.png" style="align-items: center"/>
+        </ion-card>
+      </ion-slide>
+      <ion-slide>
+        <ion-card class = "cartafoto">
+          <img class = "foto" src="../assets/icon/corg.png" style="align-items: center"/>
+        </ion-card>
+      </ion-slide>
+      <ion-slide>
+        <ion-card class = "cartafoto">
+          <img class = "foto" src="../assets/icon/corg.png" style="align-items: center"/>
+        </ion-card>
+      </ion-slide>
+     </ion-slides>
+     
+    <ion-card class = "carta">
+      <ion-card-header>
+        <ion-card-title>{{mipublicacion.titulo}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>{{mipublicacion.descripcion}}</ion-card-content>
+    </ion-card>
+    <div style="text-align: center;">
+        <ion-button >Donar</ion-button>
+    </div>
+  </div>
 </ion-content>

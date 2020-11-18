@@ -31,5 +31,10 @@
  }
 
  ion-content{
-    --ion-background-color: #E2F8C5;
+   --ion-background-color: #E2F8C5;
+ }
+
+ .foto{
+   animation: bounce;
+   animation-duration: 2s; 
  }
