@@ -1,0 +1,32 @@
+<ion-header translucent>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/"></ion-back-button>
+      </ion-buttons>
+      <ion-title>INICIO</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+         <ion-card class ="card">
+          <img class = "foto" src="../assets/icon/misdonaciones.png" style="align-items: center"/>
+          <ion-card-content>
+            <ion-button (click)="historialDonaciones()" fill="solid" expand="full" slot="botton">mi historial de donaciones</ion-button>
+          </ion-card-content>
+         </ion-card>
+      </ion-col>
+      <ion-col>
+          <ion-card class = "card">
+            <img class = "foto" src="../assets/icon/realizardonacion.png" style="align-items: center"/>
+            <ion-card-content>
+              <ion-button (click)="realizarDonacion()" fill="solid"expand="full" slot="botton">Realizar una donacion</ion-button>
+            </ion-card-content>
+
+          </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
