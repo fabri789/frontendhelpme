@@ -1,4 +1,11 @@
-
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>INICIO</ion-title>
+  </ion-toolbar>
+</ion-header>
 <ion-content>
   <div *ngIf = "mipublicacion">
     <ion-slides [options] ="slideOpts" >
