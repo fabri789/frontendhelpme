@@ -1,32 +1,35 @@
-<ion-header translucent>
-    <ion-toolbar>
-      <ion-buttons slot="start">
-        <ion-back-button defaultHref="/"></ion-back-button>
-      </ion-buttons>
-      <ion-title>INICIO</ion-title>
-    </ion-toolbar>
-</ion-header>
+
 <ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>Elija Opcion de Pago</ion-label>
+      <ion-select>
+        <ion-select-option disabled = "true">Tarjeta Debito</ion-select-option>
+        <ion-select-option disabled ="true">Tarjeta Credito</ion-select-option>
+        <ion-select-option >Mercado Pago</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Monto (Pesos ARS):</ion-label>
+      <ion-input class ="david" type ="number" min = 0></ion-input>
+    </ion-item>
+  </ion-list>
   <ion-grid>
-    <ion-row>
+    <ion-row >
       <ion-col>
-         <ion-card class ="card">
-          <img class = "foto" src="../assets/icon/misdonaciones.png" style="align-items: center"/>
-          <ion-card-content>
-            <ion-button (click)="historialDonaciones()" fill="solid" expand="full" slot="botton">mi historial de donaciones</ion-button>
-          </ion-card-content>
-         </ion-card>
+        <div style="text-align: center;">
+          
+          <ion-button>
+            <ion-icon slot ="end" name="close-circle-outline"></ion-icon>
+            Cancelar
+          </ion-button>
+      </div>
       </ion-col>
       <ion-col>
-          <ion-card class = "card">
-            <img class = "foto" src="../assets/icon/realizardonacion.png" style="align-items: center"/>
-            <ion-card-content>
-              <ion-button (click)="realizarDonacion()" fill="solid"expand="full" slot="botton">Realizar una donacion</ion-button>
-            </ion-card-content>
-
-          </ion-card>
+        <div style="text-align: center;">
+          <ion-button >Realizar Donacion</ion-button>
+        </div>
       </ion-col>
     </ion-row>
   </ion-grid>
-
 </ion-content>

@@ -11,10 +11,12 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { RegistroOrganizacionPage } from 'src/app/modals/registro-organizacion/registro-organizacion.page';
 import { RegistroUsuarioPage } from 'src/app/modals/registro-usuario/registro-usuario.page';
+import {DonacionPage} from 'src/app/paginas/donacion/donacion.page';
 
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClient, HttpHeaders, HttpHandler } from '@angular/common/http'
 import { HomePage } from './home/home.page';
+import { DonacionPageModule } from './paginas/donacion/donacion.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -25,6 +27,7 @@ import { HomePage } from './home/home.page';
     SplashScreen,
     RegistroOrganizacionPage,
     RegistroUsuarioPage,
+    DonacionPageModule,
     HttpClient,
     HttpClientModule,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }

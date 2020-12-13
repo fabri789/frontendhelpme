@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import {PublicacionService} from '../publicacion/servicios/publicacion.service'
+import {ModalController, NavParams} from '@ionic/angular';
+import {DonacionPage} from 'src/app/paginas/donacion/donacion.page'
 import { ViewChild } from '@angular/core';
 import { IonSlides} from '@ionic/angular';
+import { DonacionPageModule } from '../donacion/donacion.module';
 
 @Component({
   selector: 'app-publicacion',
@@ -20,7 +23,7 @@ export class PublicacionPage implements OnInit {
   id_publicacion : any;
   mipublicacion : any ;
 
-  constructor(public route: ActivatedRoute, public publicacion: PublicacionService) { }
+  constructor(public route: ActivatedRoute, public publicacion: PublicacionService, public modalDonacion: ModalController, pageDonacion:DonacionPageModule) { }
 
   ngOnInit() {
     this.route.params.subscribe(params =>{
@@ -44,6 +47,15 @@ export class PublicacionPage implements OnInit {
         console.log(error);
       }
     ) 
+  }
+
+ async abrirModal(){
+    const modal = await this.modalDonacion.create({
+      component : DonacionPage,
+    }).then(modal =>{
+      modal.onDidDismiss()
+      modal.present()
+    })
   }
  
 }
