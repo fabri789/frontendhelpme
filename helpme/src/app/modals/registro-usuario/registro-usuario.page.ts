@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-registro-usuario',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistroUsuarioPage implements OnInit {
 
-  constructor() { }
+  constructor(public modal :ModalController) { }
 
   ngOnInit() {
+  }
+  dismiss(){
+    this.modal.dismiss();
+
   }
 
 }

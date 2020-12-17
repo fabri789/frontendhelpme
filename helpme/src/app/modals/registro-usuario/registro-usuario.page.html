@@ -1,5 +1,6 @@
 <ion-content>
       <ion-card>
+        <ion-list>
         <ion-item>
           <ion-input>
             <ion-label>Nombre</ion-label>
@@ -25,9 +26,26 @@
             <ion-label>Contraseña</ion-label>
           </ion-input>
         </ion-item>
+        <ion-grid>
+          <ion-row >
+            <ion-col>
+              <div style="text-align: center;">
+                <ion-button (click)="dismiss()">
+                  <ion-icon slot ="end" name="close-circle-outline"></ion-icon>
+                  Cancelar
+                </ion-button>
+            </div>
+            </ion-col>
+            <ion-col>
+              <div style="text-align: center;">
+                <ion-button (click)="realizarDonacion()">Registrarse</ion-button>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-list>
       </ion-card>
 </ion-content>
-<ion-button expand="full" slot="botton">Registrarse</ion-button>
 
 
 
