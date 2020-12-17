@@ -15,14 +15,14 @@
         <ion-label>Preguntas y Respuestas</ion-label>
       </ion-tab-button>
       
-      <ion-tab-button tab="registro">
-        <ion-icon name="person-add"></ion-icon>
-        <ion-label>Registrarse</ion-label>
-      </ion-tab-button>
+        <!-- <ion-tab-button tab="registro">
+          <ion-icon name="person-add"></ion-icon>
+          <ion-label>Registrarse</ion-label>
+        </ion-tab-button> -->
       
-      <ion-tab-button tab="login">
-        <ion-icon name="log-in"></ion-icon>
-        <ion-label>Entrar</ion-label>
+      <ion-tab-button (click)="presentPopover($event)">
+        <ion-icon name="person-circle-outline"></ion-icon>
+        <ion-label>Perfil</ion-label>
       </ion-tab-button>
     </ion-tab-bar>
   

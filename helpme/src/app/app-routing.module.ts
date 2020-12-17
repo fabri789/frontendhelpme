@@ -51,6 +51,7 @@ const routes: Routes = [
     path: 'donacion',
     loadChildren: () => import('./paginas/donacion/donacion.module').then( m => m.DonacionPageModule)
   },
+
 ];
 
 @NgModule({

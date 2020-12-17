@@ -52,6 +52,9 @@ export class PublicacionPage implements OnInit {
  async abrirModal(){
     const modal = await this.modalDonacion.create({
       component : DonacionPage,
+      componentProps: {
+        id_publicacion : this.id_publicacion
+      }
     }).then(modal =>{
       modal.onDidDismiss()
       modal.present()
