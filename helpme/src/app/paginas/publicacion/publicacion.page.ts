@@ -22,6 +22,8 @@ export class PublicacionPage implements OnInit {
 
   id_publicacion : any;
   mipublicacion : any ;
+  misdonaciones : any;
+  totalMonto : any;
 
   constructor(public route: ActivatedRoute, public publicacion: PublicacionService, public modalDonacion: ModalController, pageDonacion:DonacionPageModule) { }
 
@@ -29,6 +31,7 @@ export class PublicacionPage implements OnInit {
     this.route.params.subscribe(params =>{
       this.id_publicacion = params.id;
       this.traerPublicacionId();
+      this.traerTotalDonacion();
     })
     console.log("fafa", this.id_publicacion);
   }
@@ -48,6 +51,22 @@ export class PublicacionPage implements OnInit {
       }
     ) 
   }
+  traerTotalDonacion(){
+    this.publicacion.donacionesPorId(this.id_publicacion).subscribe(
+      (data) =>{
+        if(data.hasOwnProperty("result")){
+          this.misdonaciones = data;
+          this.misdonaciones = this.misdonaciones.result;
+          console.log(this.misdonaciones);
+          this.totalDonaciones();
+
+        }
+      },
+      (error) =>{
+        console.log(error);
+      }
+    )
+  }
 
  async abrirModal(){
     const modal = await this.modalDonacion.create({
@@ -60,5 +79,13 @@ export class PublicacionPage implements OnInit {
       modal.present()
     })
   }
+
+ totalDonaciones(){
+   this.totalMonto =0;
+   for(let i = 0; i< this.misdonaciones.length;i++ ){
+     this.totalMonto = this.totalMonto + parseInt(this.misdonaciones[i].monto)
+   }
+
+ }
  
 }

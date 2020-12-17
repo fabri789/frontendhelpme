@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import{DonacionesService} from '../donacion/servicios/donaciones.service'
 import { AlertController } from '@ionic/angular';
+import { ModalController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-donacion',
@@ -13,7 +15,7 @@ export class DonacionPage implements OnInit {
   monto : any;
   id_publicacion
 
-  constructor( public donaciones: DonacionesService, public alerta :AlertController) { }
+  constructor( public donaciones: DonacionesService, public alerta :AlertController, public modal : ModalController) { }
 
   ngOnInit() {
   }
@@ -51,6 +53,11 @@ export class DonacionPage implements OnInit {
       buttons : ['OK']
     });
     await alert.present()
+  }
+
+  dismiss(){
+    this.modal.dismiss();
+
   }
 
 }

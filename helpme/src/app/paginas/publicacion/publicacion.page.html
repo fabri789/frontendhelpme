@@ -30,7 +30,10 @@
       <ion-card-header>
         <ion-card-title>{{mipublicacion.titulo}}</ion-card-title>
       </ion-card-header>
-      <ion-card-content>{{mipublicacion.descripcion}}</ion-card-content>
+      <ion-card-content>
+        {{mipublicacion.descripcion}}
+        <p color = "red">Monto Acumulado: {{totalMonto}}</p>
+      </ion-card-content>
     </ion-card>
     <div style="text-align: center;">
         <ion-button (click)= "abrirModal()" >Donar</ion-button>

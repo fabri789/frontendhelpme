@@ -22,4 +22,7 @@ export class PublicacionService {
    publicacionesporId(id){
     return this.http.get(this.apiDir+'/publicaciones/'+ id)
   }
+  donacionesPorId(id){
+    return this.http.get(this.apiDir+'/donaciones/'+ id)
+  }
 }
